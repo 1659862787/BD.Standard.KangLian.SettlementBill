@@ -10,7 +10,7 @@ namespace BD.Standard.KangLian.SettlementBill
     {
         public static void log(string data )
         {
-            string path = @"E:\//Log\";
+            string path = @"C:\//Log\";
             //debug==================================================  
             //StreamWriter dout = new StreamWriter(@"c:\" + System.DateTime.Now.ToString("yyyMMddHHmmss") + ".txt");  
             StreamWriter dout = new StreamWriter(path + System.DateTime.Now.ToString("yyyMMdd")+ ".txt", true);

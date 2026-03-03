@@ -7,8 +7,8 @@
     <ProjectGuid>{E4A5C2E5-E4A1-462C-B9E9-4D815309EB20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BD.Standard.KangLian.SettlementBill</RootNamespace>
-    <AssemblyName>BD.Standard.KangLian.SettlementBill</AssemblyName>
+    <RootNamespace>BD.Standard.KangLian.SettlementBill1</RootNamespace>
+    <AssemblyName>BD.Standard.KangLian.SettlementBill1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
