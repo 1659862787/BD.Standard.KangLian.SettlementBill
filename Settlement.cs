@@ -11,7 +11,7 @@ using Kingdee.BOS.Core.Bill.PlugIn;
 using Kingdee.BOS.Core.Metadata.EntityElement;
 using System.Text;
 
-namespace BD.Standard.KangLian.SettlementBill26
+namespace BD.Standard.KangLian.SettlementBill
 {
     [Description("结算单插件，点击按钮打开动态表单插件")]
     [Kingdee.BOS.Util.HotUpdate]

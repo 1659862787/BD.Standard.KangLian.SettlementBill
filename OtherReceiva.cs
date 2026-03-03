@@ -14,7 +14,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Text;
 
-namespace BD.Standard.KangLian.SettlementBill26
+namespace BD.Standard.KangLian.SettlementBill
 {
     [Description("动态表单插件")]
     [Kingdee.BOS.Util.HotUpdate]

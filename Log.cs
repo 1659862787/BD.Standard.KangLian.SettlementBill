@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace BD.Standard.KangLian.SettlementBill26
+namespace BD.Standard.KangLian.SettlementBill
 {
     public class Log
     {
