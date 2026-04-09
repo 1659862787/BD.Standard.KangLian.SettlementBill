@@ -175,8 +175,8 @@ namespace BD.Standard.KangLian.SettlementBill
                                                 {
                                                     if (oEntry["id"].ToString().Equals(returndata["fsrcentryid"].ToString()))
                                                     {
-                                                        dec = Convert.ToDecimal(oEntry["F_Sljk_Amount"]) - qty1;
-                                                        oEntry["F_Sljk_Amount"] = Convert.ToDecimal(oEntry["F_Sljk_Amount"]) - qty1;
+                                                        dec = Convert.ToDecimal(oEntry["F_PUB_Amount"]) - qty1;
+                                                        oEntry["F_PUB_Amount"] = Convert.ToDecimal(oEntry["F_PUB_Amount"]) - qty1;
                                                         break;
                                                     }
                                                 }
@@ -328,9 +328,9 @@ namespace BD.Standard.KangLian.SettlementBill
                                     if (oEntry["id"].ToString().Equals(s[1].ToString()))
                                     {
                                         sb1.Append("\r\n其他应付单：" + Expobj1["Billno"]);
-                                        sb1.Append("\r\n其他应付单未核销金额反写：" + (Convert.ToDecimal(oEntry["F_Sljk_Amount"]) + Convert.ToDecimal(s[2])));
+                                        sb1.Append("\r\n其他应付单剩余可用数量反写：" + (Convert.ToDecimal(oEntry["F_PUB_Amount"]) + Convert.ToDecimal(s[2])));
                                         //oEntry["FNOTWRITTENOFFAMOUNTFOR"] = Convert.ToDecimal(oEntry["FNOTWRITTENOFFAMOUNTFOR"])+Convert.ToDecimal(s[2]);
-                                        oEntry["F_Sljk_Amount"] = Convert.ToDecimal(oEntry["F_Sljk_Amount"]) + Convert.ToDecimal(s[2]);
+                                        oEntry["F_PUB_Amount"] = Convert.ToDecimal(oEntry["F_PUB_Amount"]) + Convert.ToDecimal(s[2]);
                                         break;
                                     }
                                 }
