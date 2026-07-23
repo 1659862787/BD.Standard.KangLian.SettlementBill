@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Kingdee.BOS.Core.Bill.PlugIn;
+using Kingdee.BOS.Core.DynamicForm;
+using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
+using Kingdee.BOS.Core.DynamicForm.PlugIn.ControlModel;
+using Kingdee.BOS.Core.Metadata;
+using Kingdee.BOS.Core.Metadata.EntityElement;
+using Kingdee.BOS.Core.Metadata.Util;
+using Kingdee.BOS.Orm.DataEntity;
+using Kingdee.BOS.ServiceHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
-using Kingdee.BOS.Core.DynamicForm;
-using Kingdee.BOS.Core.Metadata;
-using Kingdee.BOS.Orm.DataEntity;
-
-using Kingdee.BOS.ServiceHelper;
-using Kingdee.BOS.Core.Bill.PlugIn;
-using Kingdee.BOS.Core.Metadata.EntityElement;
 using System.Text;
 
 namespace BD.Standard.KangLian.SettlementBill
@@ -267,10 +268,6 @@ namespace BD.Standard.KangLian.SettlementBill
 
                     this.View.Model.Save();
                 }
-                
-
-
-
                 //保存校验
             }catch(Exception ex)
             {
@@ -343,5 +340,6 @@ namespace BD.Standard.KangLian.SettlementBill
                 }
             }catch (Exception ex) { throw new Exception(ex.Message); }
         }
+
     }
 }
