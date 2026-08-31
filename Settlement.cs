@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Kingdee.BOS.Core.Bill.PlugIn;
+using Kingdee.BOS.Core.DynamicForm;
+using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
+using Kingdee.BOS.Core.DynamicForm.PlugIn.ControlModel;
+using Kingdee.BOS.Core.Metadata;
+using Kingdee.BOS.Core.Metadata.EntityElement;
+using Kingdee.BOS.Core.Metadata.Util;
+using Kingdee.BOS.Orm.DataEntity;
+using Kingdee.BOS.ServiceHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
-using Kingdee.BOS.Core.DynamicForm;
-using Kingdee.BOS.Core.Metadata;
-using Kingdee.BOS.Orm.DataEntity;
-
-using Kingdee.BOS.ServiceHelper;
-using Kingdee.BOS.Core.Bill.PlugIn;
-using Kingdee.BOS.Core.Metadata.EntityElement;
 using System.Text;
 using Kingdee.BOS.Core.Metadata.Util;
 
@@ -341,17 +342,5 @@ namespace BD.Standard.KangLian.SettlementBill
             }catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
-        public override void BeforeClosed(BeforeClosedEventArgs e)
-        {
-            base.BeforeClosed(e);
-            bool cancel = e.Cancel;
-            Console.WriteLine(cancel);
-        }
-
-        public override void FormClosed(FormClosedEventArgs e)
-        {
-            base.FormClosed(e);
-            
-        }
     }
 }
