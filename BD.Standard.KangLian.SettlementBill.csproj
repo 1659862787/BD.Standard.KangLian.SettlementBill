@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Log.cs" />
+    <Compile Include="OtherPayable.cs" />
+    <Compile Include="OtherPayableOperation.cs" />
     <Compile Include="Settlement.cs" />
     <Compile Include="OtherReceiva.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

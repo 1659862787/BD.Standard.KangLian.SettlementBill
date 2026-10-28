@@ -212,7 +212,7 @@ namespace BD.Standard.KangLian.SettlementBill
                             BusinessDataServiceHelper.Save(this.Context, Expobj);
   
                         }
-                        this.View.Refresh("Sljk_Cust_Entry100002");
+                        this.View.Refresh();
                    
                     });
                     
