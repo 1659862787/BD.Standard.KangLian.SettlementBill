@@ -51,7 +51,8 @@ namespace BD.Standard.KangLian.SettlementBill
                     PermissionItemId = "6e44119a58cb4a8e86f6c385e14a17ad"
                 };
                 ((DynamicFormShowParameter)para).OpenStyle.ShowType = (ShowType)6;
-                para.ListFilterParameter.Filter = string.Format($"FDocumentStatus='C' and FYFANMATERIALIDD={FYFANMATERIALIDD[0]} and FCONTACTUNIT={FCONTACTUNIT[0]} and F_PUB_Amount>={num2}");
+                para.ListFilterParameter.Filter = string.Format($"FDocumentStatus='C' and FYFANMATERIALIDD={FYFANMATERIALIDD[0]} and FCONTACTUNIT={FCONTACTUNIT[0]} and F_PUB_Amount>={num2} and  FBILLTYPEID = '652e06e5a8679f'");
+                //数量可用余额单 FBILLTYPEID = '652e06e5a8679f'
                 this.View.ShowForm(para, delegate (FormResult result)
                 {
                     object returnData = result.ReturnData;
