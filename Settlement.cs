@@ -10,7 +10,6 @@ using Kingdee.BOS.ServiceHelper;
 using Kingdee.BOS.Core.Bill.PlugIn;
 using Kingdee.BOS.Core.Metadata.EntityElement;
 using System.Text;
-using Kingdee.BOS.Core.Metadata.Util;
 
 namespace BD.Standard.KangLian.SettlementBill
 {
@@ -268,6 +267,10 @@ namespace BD.Standard.KangLian.SettlementBill
 
                     this.View.Model.Save();
                 }
+                
+
+
+
                 //保存校验
             }catch(Exception ex)
             {
@@ -339,19 +342,6 @@ namespace BD.Standard.KangLian.SettlementBill
                     }
                 }
             }catch (Exception ex) { throw new Exception(ex.Message); }
-        }
-
-        public override void BeforeClosed(BeforeClosedEventArgs e)
-        {
-            base.BeforeClosed(e);
-            bool cancel = e.Cancel;
-            Console.WriteLine(cancel);
-        }
-
-        public override void FormClosed(FormClosedEventArgs e)
-        {
-            base.FormClosed(e);
-            
         }
     }
 }
