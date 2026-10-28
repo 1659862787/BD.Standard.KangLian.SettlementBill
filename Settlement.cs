@@ -212,7 +212,7 @@ namespace BD.Standard.KangLian.SettlementBill
                             BusinessDataServiceHelper.Save(this.Context, Expobj);
   
                         }
-                        this.View.Refresh();
+                        this.View.Refresh("Sljk_Cust_Entry100002");
                    
                     });
                     
@@ -283,7 +283,7 @@ namespace BD.Standard.KangLian.SettlementBill
                 
                 string billtype = ((DynamicObject)this.View.Model.GetValue("FBillTypeID"))["number"].ToString();
                 //if (e.BarItemKey.Equals("tbSplitSave") && billtype.Equals("借条结算单"))
-                if (e.BarItemKey.Equals("tbSplitSave") && billtype.Equals("借条结算单"))
+                if ((e.BarItemKey.Equals("tbSplitSave") || e.BarItemKey.Equals("tbSave")) && billtype.Equals("借条结算单"))
                 {
                     
                     Entity entity1 = this.View.BillBusinessInfo.GetEntity("FEntityDetail");
