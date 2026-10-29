@@ -5,11 +5,7 @@ using Kingdee.BOS.Core.List;
 using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.Util;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BD.Standard.KangLian.SettlementBill
 {

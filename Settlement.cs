@@ -1,17 +1,14 @@
 ﻿using Kingdee.BOS.Core.Bill.PlugIn;
 using Kingdee.BOS.Core.DynamicForm;
 using Kingdee.BOS.Core.DynamicForm.PlugIn.Args;
-using Kingdee.BOS.Core.DynamicForm.PlugIn.ControlModel;
 using Kingdee.BOS.Core.Metadata;
 using Kingdee.BOS.Core.Metadata.EntityElement;
-using Kingdee.BOS.Core.Metadata.Util;
 using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.ServiceHelper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
-using Kingdee.BOS.Core.Metadata.Util;
 
 namespace BD.Standard.KangLian.SettlementBill
 {
