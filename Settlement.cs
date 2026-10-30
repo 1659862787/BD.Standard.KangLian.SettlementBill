@@ -33,10 +33,6 @@ namespace BD.Standard.KangLian.SettlementBill
                 string billtype = ((DynamicObject)this.View.Model.GetValue("FBillTypeID"))["number"].ToString();
                 if (e.BarItemKey.Equals("ANtbButton") && billtype.Equals("借条结算单"))
                 {
-                    if (((DynamicObject)this.Model.DataObject)["id"].ToString().Equals("0"))
-                    {
-                        this.View.InvokeFormOperation(FormOperationEnum.Save);
-                    }
                     //打开单据查看实例
                     DynamicFormShowParameter para = new DynamicFormShowParameter();
                     //打开样式,打开动态表单
@@ -68,12 +64,15 @@ namespace BD.Standard.KangLian.SettlementBill
                     para.CustomParams.Add("FSALEDEPTID", deptid);//销售部门
                     para.CustomParams.Add("FMATERIAL", masterids);//费用项目 e.Row
                     para.ParentPageId = this.View.ParentFormView.PageId;
-                    this.View.ShowForm(para, delegate (FormResult result)
+                    this.View.ShowForm(para, result=>
                     {
-                        //this.View.ShowForm(para, new Action<FormResult>((result) => { 
                         //动态表单返回数据
                         if (result.ReturnData != null)
                         {
+                            if (((DynamicObject)this.Model.DataObject)["id"].ToString().Equals("0"))
+                            {
+                                this.View.InvokeFormOperation(FormOperationEnum.Save);
+                            }
                             List<Dictionary<string, object>> list = result.ReturnData as List<Dictionary<string, object>>;
                             DynamicObject obj = this.Model.DataObject;
                             string id = obj["id"].ToString();
@@ -207,9 +206,9 @@ namespace BD.Standard.KangLian.SettlementBill
                                 }
                             }
                             BusinessDataServiceHelper.Save(this.Context, Expobj);
-  
+                            this.View.Refresh();
                         }
-                        this.View.Refresh();
+                        //this.View.Refresh();
                    
                     });
                     

@@ -40,7 +40,7 @@ namespace BD.Standard.KangLian.SettlementBill
                 {
                     string id = dynamicObject[0].ToString();
                     
-                    string sql = $"/*dialect*/select a.* from  Sljk_t_Cust_Entry100002 a inner join t_AR_receivable b on a.FID=b.FID where FBILLTYPEID='652de056a84984' and F_SLJK_BASE<>0 and F_SLJK_AMOUNT>0 and b.fid={id}";
+                    string sql = $"/*dialect*/select a.* from  Sljk_t_Cust_Entry100002 a inner join t_AR_receivable b on a.FID=b.FID where FBILLTYPEID='652de056a84984' and F_SLJK_BASE<>0 and F_SLJK_AMOUNTED1>0 and b.fid={id}";
                     DynamicObjectCollection dy = DBUtils.ExecuteDynamicObject(base.Context, sql);
                     if (dy.Count>0)
                     {
